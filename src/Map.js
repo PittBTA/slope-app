@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import GoogleMapReact from 'google-map-react';
 
-class App extends Component {
+class Map extends Component {
   static defaultProps = {
     center: {
       lat: 40.4444,
@@ -14,16 +14,17 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: '100vh', width: '100%' }} id='map'>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyC6A9F8FIGDy-YOWv0hLQyW33wfltkG40Q' }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
         </GoogleMapReact>
+
       </div>
     );
   }
 }
 
-export default App;
+export default Map;
